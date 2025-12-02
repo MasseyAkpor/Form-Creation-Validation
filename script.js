@@ -1,3 +1,4 @@
+document.addEventListener("DOMContentLoaded", function () {
 const form = document.getElementById('registration-form');
 const feedBackDiv = document.getElementById('form-feedback');
 
@@ -36,4 +37,5 @@ if (!isValid) {
     feedBackDiv.textContent = messages.join('<br>');
     feedBackDiv.style.color = '#dc3545';
 }
+})
 
