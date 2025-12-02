@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
 const form = document.getElementById('registration-form');
-const feedBackDiv = document.getElementById('form-feedback');
+const feedbackDiv = document.getElementById('form-feedback');
 
 form.addEventListener('submit', async(event) => {
     event.preventDefault();
@@ -28,15 +28,16 @@ if (password.length < 8) {
     messages.push('Password must be at least 8 characters long.');
 }
 
-feedBackDiv.style.display = 'block';
+feedbackDiv.style.display = 'block';
 
 if (!isValid) {
-    feedBackDiv.textContent = "Regustration Successful";
-    feedBackDiv.style.color = '#28a745';
+    feedbackDiv.textContent = "Regustration Successful";
+    feedbackDiv.style.color = '#28a745';
 }else if (isValid) {
-    feedBackDiv.textContent = messages.join('<br>');
-    feedBackDiv.style.color = '#dc3545';
+    feedbackDiv.textContent = messages.join('<br>');
+    feedbackDiv.style.color = '#dc3545';
 }
 })
+
 
 
