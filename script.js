@@ -13,19 +13,19 @@ const passwordInput = document.getElementById('password').value.trim();
 let isValid = true;
 let messages = [];
 
-if (userInput.length < 3) {
+if (userName.length < 3) {
     isValid = false;
-    messages.push('Username must be at least 3 characters long.');
+    messages.push("Username must be at least 3 characters long.");
 }
 
-if (!/\S+@\S+\.\S+/.test(emailInput)) {
+if (!email.includes("@") || !email.includes(".")) {
     isValid = false;
-    messages.push('Please enter a valid email address.');
+    messages.push("Please enter a valid email address.");
 }
 
-if (passwordInput.length < 8) {
+if (password.length < 8) {
     isValid = false;
-    messages.push('Password must be at least 6 characters long.');
+    messages.push('Password must be at least 8 characters long.');
 }
 
 feedBackDiv.style.display = 'block';
@@ -38,4 +38,5 @@ if (!isValid) {
     feedBackDiv.style.color = '#dc3545';
 }
 })
+
 
