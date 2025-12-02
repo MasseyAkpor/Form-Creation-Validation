@@ -31,13 +31,14 @@ if (password.length < 8) {
 feedbackDiv.style.display = 'block';
 
 if (!isValid) {
-    feedbackDiv.textContent = "Registration Successful";
+    feedbackDiv.textContent = "Registration successful";
     feedbackDiv.style.color = '#28a745';
 }else if (isValid) {
     feedbackDiv.innerHTML = messages.join('<br>');
     feedbackDiv.style.color = '#dc3545';
 }
 })
+
 
 
 
