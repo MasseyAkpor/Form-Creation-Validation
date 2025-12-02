@@ -13,7 +13,7 @@ const passwordInput = document.getElementById('password').value.trim();
 let isValid = true;
 let messages = [];
 
-if (userName.length < 3) {
+if (username.length < 3) {
     isValid = false;
     messages.push("Username must be at least 3 characters long.");
 }
@@ -38,6 +38,7 @@ if (!isValid) {
     feedbackDiv.style.color = '#dc3545';
 }
 })
+
 
 
 
