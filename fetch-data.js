@@ -19,10 +19,11 @@ async function fetchUserData() {
     }
     catch (error) {
         dataContainer.innerHTML = '';
-        dataContainer.textContent = `failed to load user data: ${error.message}`;
+        dataContainer.textContent = `Failed to load user data: ${error.message}`;
     }
 
 }
 document.addEventListener('DOMContentLoaded', function() {
     fetchUserData();
 }); 
+
